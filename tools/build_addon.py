@@ -479,6 +479,25 @@ def package_mcpack(workspace_dir, output_mcpack):
 
     print(f"Created {output_mcpack} successfully!")
 
+def package_mcaddon(workspace_dir, output_mcaddon):
+    with zipfile.ZipFile(output_mcaddon, 'w', zipfile.ZIP_DEFLATED) as zf:
+        bp_folder = "GoodVillager_BP"
+        manifest_path = os.path.join(workspace_dir, "manifest.json")
+        zf.write(manifest_path, f"{bp_folder}/manifest.json")
+
+        icon_path = os.path.join(workspace_dir, "pack_icon.png")
+        if os.path.exists(icon_path):
+            zf.write(icon_path, f"{bp_folder}/pack_icon.png")
+
+        trading_dir = os.path.join(workspace_dir, "trading")
+        for root, _, files in os.walk(trading_dir):
+            for file in files:
+                abs_path = os.path.join(root, file)
+                rel_path = os.path.relpath(abs_path, workspace_dir)
+                zf.write(abs_path, f"{bp_folder}/{rel_path}")
+
+    print(f"Created {output_mcaddon} successfully!")
+
 def main():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     workspace_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -514,9 +533,12 @@ def main():
     icon_path = os.path.join(workspace_dir, "pack_icon.png")
     generate_pack_icon(icon_path)
 
-    # Package into GoodVillager.mcpack
+    # Package into GoodVillager.mcpack and GoodVillager.mcaddon
     mcpack_path = os.path.join(workspace_dir, "GoodVillager.mcpack")
     package_mcpack(workspace_dir, mcpack_path)
+
+    mcaddon_path = os.path.join(workspace_dir, "GoodVillager.mcaddon")
+    package_mcaddon(workspace_dir, mcaddon_path)
 
     print("\nAll files for Version 0.2 built and packaged successfully!")
 

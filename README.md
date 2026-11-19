@@ -46,11 +46,15 @@
 
 ## 📦 วิธีการติดตั้งและใช้งาน (Installation)
 
-1. ดาวน์โหลดไฟล์ `GoodVillager.mcpack` จากหน้า Releases หรือในโปรเจกต์
-2. ดับเบิลคลิกที่ไฟล์ `GoodVillager.mcpack` เพื่อให้ตัวเกม Minecraft Bedrock เปิดและนำเข้า Add-on โดยอัตโนมัติ
-3. เข้าไปที่การตั้งค่าโลกของคุณ (World Settings) -> ไปที่แท็บ **Behavior Packs**
-4. เลือกเปิดใช้งาน (Activate) **GoodVillager**
-5. เข้าเล่นเกมและเริ่มแลกเปลี่ยนกับชาวบ้านได้ทันที!
+คุณสามารถเลือกดาวน์โหลดไฟล์ติดตั้งได้ 2 รูปแบบตามความสะดวก:
+1. **`GoodVillager.mcaddon` (แนะนำ):** เป็นไฟล์ Bundle มาตรฐานสากลสำหรับ Bedrock Add-on ดับเบิลคลิกเพื่อติดตั้งแพ็กเกจทั้งหมดเข้าตัวเกมทันที
+2. **`GoodVillager.mcpack`:** สำหรับติดตั้ง Behavior Pack เดี่ยว
+
+**ขั้นตอนการเปิดใช้งานในเกม:**
+1. ดับเบิลคลิกที่ไฟล์ `.mcaddon` หรือ `.mcpack` เพื่อให้ Minecraft นำเข้าอัตโนมัติ
+2. เปิดการตั้งค่าโลกของคุณ (World Settings) ➔ ไปที่แท็บ **Behavior Packs**
+3. เลือกเปิดใช้งาน (Activate) **GoodVillager**
+4. เข้าเล่นเกมและเริ่มเทรดได้ทันที!
 
 ---
 
@@ -64,7 +68,8 @@ GoodVillager/
 ├── docs/adr/               # Architecture Decision Records (ADRs)
 ├── manifest.json           # การกำหนดค่า Behavior Pack และ Engine Version
 ├── pack_icon.png           # รูปไอคอนของ Add-on
-├── GoodVillager.mcpack     # ไฟล์ติดตั้งสำเร็จรูป One-Click Installer
+├── GoodVillager.mcaddon     # ไฟล์ติดตั้งสำเร็จรูป One-Click Add-on Bundle
+├── GoodVillager.mcpack     # ไฟล์ติดตั้งสำเร็จรูป One-Click Pack
 ├── tools/
 │   └── build_addon.py      # สคริปต์อัตโนมัติสร้างและคอมไพล์ตารางเทรดพร้อมแพ็กเกจ
 └── trading/                # ตารางข้อมูลการแลกเปลี่ยน (Economy Trades) ของทุกอาชีพ
