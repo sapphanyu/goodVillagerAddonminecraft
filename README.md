@@ -1,32 +1,39 @@
-# 🌾 GoodVillager Minecraft Bedrock Add-on
+# 🌾 GoodVillager Minecraft Bedrock Add-on (Version 0.2)
 
 [![Minecraft Bedrock](https://img.shields.io/badge/Minecraft-Bedrock%201.21%2B%20--%2026.xx%2B-brightgreen.svg)](https://minecraft.net/)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20iOS%20%7C%20Android%20%7C%20Console-blue.svg)]()
 [![Type](https://img.shields.io/badge/Type-Behavior%20Pack-orange.svg)]()
+[![Version](https://img.shields.io/badge/Release-v0.2-blue.svg)]()
 
-**GoodVillager** คือ Add-on สำหรับ **Minecraft Bedrock Edition** ที่ออกแบบมาเพื่อยกระดับความสะดวกสบายในการแลกเปลี่ยน (Trading) กับชาวบ้าน ให้ผู้เล่นไม่ต้องเสียเวลาสุ่มหาของ ไม่ต้องกักตุนของเพื่อฟาร์มเลเวลชาวบ้าน และไม่ต้องหงุดหงิดกับปัญหาสินค้าหมดสต็อกอีกต่อไป!
+**GoodVillager** คือ Add-on สำหรับ **Minecraft Bedrock Edition** ที่ออกแบบมาเพื่อยกระดับความสะดวกสบายในการแลกเปลี่ยน (Trading) กับชาวบ้าน ให้ผู้เล่นไม่ต้องเสียเวลาสุ่มหาของ ไม่ต้องกักตุนของเพื่อฟาร์มเลเวลชาวบ้านนานๆ และไม่ต้องหงุดหงิดกับปัญหาสินค้าหมดสต็อกอีกต่อไป!
 
 ---
 
-## ✨ คุณสมบัติเด่น (Key Features)
+## ✨ คุณสมบัติเด่นในเวอร์ชัน 0.2 (Version 0.2 Highlights)
 
-### 1. 🔓 ปลดล็อคข้อเสนอทั้งหมดทันที (Instant All-Tier Unlock)
-- ไม่ต้องทำการเทรดเพื่อเก็บแต้มประสบการณ์ (XP) สะสมเลเวลชาวบ้านอีกต่อไป
-- ข้อเสนอแลกเปลี่ยนทั้งหมดของทุกอาชีพถูกรวบรวมไว้ที่ **Tier 1** เปิดหน้าต่างเทรดขึ้นมาจะพบรายการแลกเปลี่ยนครบทั้งหมดทันที 100%
+### 1. ⚡ One-Trade Leveling (เทรด 1 ครั้งเลเวลอัปทันที)
+- หมดปัญหาการเทรดซ้ำซากเพื่อฟาร์มเลเวล! ทุกการแลกเปลี่ยนให้ `trader_exp: 10` ซึ่งสอดคล้องกับเกณฑ์เลเวล `[0, 10, 20, 30, 40]`
+- ผู้เล่นเทรดเพียง **1 ครั้ง** ที่เลเวลใดก็ตาม ชาวบ้านจะเลื่อนขั้นไปยังเลเวลถัดไปทันที (Novice -> Apprentice -> Journeyman -> Expert -> Master)
 
-### 2. 📚 ชาวบ้านขายทุกอย่างในอาชีพ (Complete Trade Catalog)
-- ครอบคลุมชาวบ้านทั้ง **13 อาชีพปกติ** และ **Wandering Trader (พ่อค้าพเนจร)**
-- **บรรณารักษ์ (Librarian):** บรรจุหนังสือเอนแชนต์ระดับสูงสุด (**Max Level**) ครบทุกเอนแชนต์ในตัวเดียว (เช่น *Mending, Unbreaking III, Fortune III, Silk Touch, Protection IV, Sharpness V, Efficiency V, Looting III ฯลฯ รวมถึงคำสาป Curse of Binding และ Curse of Vanishing*)
-- **นักทำแผนที่ (Cartographer):** มีแผนที่สำรวจโครงสร้างหายากครบทั้งหมด (*Ocean Monument, Woodland Mansion, Trial Chambers*)
-- **ช่างตีเกราะ & อาวุธ (Armorer / Weaponsmith / Toolsmith):** มีชุดเกราะเพชรและเครื่องมือเพชรครบทุกชิ้นให้เลือกซื้อทันที
+### 2. 📖 จัดระเบียบเอนแชนต์บรรณารักษ์ 5 หมวดหมู่ (Categorized Librarian Enchants)
+แบ่งหนังสือเอนแชนต์ระดับสูงสุด (Max Level) ทั้ง 36 ชนิดลงใน 5 เลเวลอย่างเป็นระเบียบ ค้นหาง่าย สบายตา และการันตีออกครบ 100%:
+- **Tier 1 (Novice) - เครื่องมือ & ประโยชน์ทั่วไป:** *Efficiency V, Silk Touch, Unbreaking III, Fortune III* (พร้อมขาย Paper, Book, Ink Sac, Bookshelf, Lantern, Glass)
+- **Tier 2 (Apprentice) - ป้องกันชุดเกราะ:** *Protection IV, Fire Protection IV, Blast Protection IV, Projectile Protection IV, Feather Falling IV, Respiration III, Aqua Affinity* (พร้อม Compass)
+- **Tier 3 (Journeyman) - อาวุธประชิด & ดาบ:** *Sharpness V, Smite V, Bane of Arthropods V, Knockback II, Fire Aspect II, Looting III* (พร้อม Clock)
+- **Tier 4 (Expert) - อาวุธยิง & ตรีศูล:** *Power V, Punch II, Flame, Infinity, Quick Charge III, Multishot, Piercing IV, Loyalty III, Riptide III, Channeling, Impaling V, Luck of the Sea III, Lure III*
+- **Tier 5 (Master) - Endgame, เคลื่อนที่ & คำสาป:** *Mending, Depth Strider III, Frost Walker II, Thorns III, Curse of Binding, Curse of Vanishing* (พร้อม Name Tag)
 
-### 3. ♾️ เทรดได้ไม่จำกัดตลอดวัน (Unlimited Trades & Flat Pricing)
-- กำหนด `max_uses: 999999` ในทุกข้อเสนอ สามารถเทรดต่อเนื่องได้ไม่จำกัดจำนวนครั้ง ไม่มีสินค้าหมดสต็อก (ไม่ติดสัญลักษณ์ 'X')
-- ปิดระบบ Demand / เงินเฟ้อ (`price_multiplier: 0.0`) ทำให้ราคาคงที่ถาวร ไม่มีการปรับราคาขึ้นแม้จะเทรดของชิ้นเดิมซ้ำๆ หลายพันรอบ
+### 3. 🎯 การันตีออกครบ 100% ทุกเทียร์ (100% Guaranteed Catalog)
+- แต่ละเทียร์ของการเทรดจะแสดงรายการแลกเปลี่ยนครบทุกชิ้น ไม่มีการสุ่มตัดบางรายการออก
+- ผู้เล่นไม่ต้องทุบโต๊ะทำงานเพื่อสุ่มหาของที่ต้องการอีกต่อไป
 
-### 4. 💎 ปรับลดทรัพยากรลง 30–50% (Resource Discount)
-- **ฝั่งซื้อของ (Buying):** จ่ายมรกต (Emeralds) หรือทรัพยากรน้อยลง 30–50% จากราคาปกติ
-- **ฝั่งขายผลผลิต (Selling):** ใช้ทรัพยากร (เช่น ข้าวสาลี, ถ่านหิน, แท่งไม้, ผลผลิตฟาร์ม) น้อยลง 30–50% ในการแลกรับ 1 มรกต ช่วยให้หาเงินได้รวดเร็วและคุ้มค่า
+### 4. ♾️ เทรดได้ไม่จำกัด & ราคาคงที่ (Unlimited Trades & Flat Pricing)
+- กำหนด `max_uses: 999999` ในทุกข้อเสนอ สามารถเทรดต่อเนื่องได้ไม่จำกัด ไม่มีสินค้าหมดสต็อก
+- ปิดระบบ Demand / เงินเฟ้อ (`price_multiplier: 0.0`) ทำให้ราคาคงที่ถาวร ไม่มีการปรับราคาขึ้น
+
+### 5. 💎 ปรับลดทรัพยากร 40–50% (Resource Discount)
+- **ฝั่งซื้อของ (Buying):** จ่ายมรกต (Emeralds) หรือทรัพยากรน้อยลง 40–50% จากราคาปกติ
+- **ฝั่งขายผลผลิต (Selling):** ใช้ผลผลิตน้อยลง 40–50% ในการแลกรับ 1 มรกต ช่วยให้ตั้งตัวได้รวดเร็ว
 
 ---
 

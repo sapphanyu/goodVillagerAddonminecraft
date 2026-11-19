@@ -41,7 +41,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -64,11 +64,16 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "total_exp_required": 10,
+      "groups": [
         {
           "num_to_select": 1,
           "trades": [
@@ -112,7 +117,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -134,7 +139,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -156,7 +161,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -178,7 +183,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -200,7 +205,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -222,7 +227,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -244,7 +249,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -266,7 +271,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -288,7 +293,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -310,7 +315,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -332,7 +337,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -354,7 +359,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -376,7 +381,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -398,7 +403,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -420,7 +425,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -442,7 +447,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -464,7 +469,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -487,7 +492,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -510,7 +515,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -533,7 +538,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -556,7 +561,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -579,7 +584,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -602,7 +607,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -625,7 +630,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -648,7 +653,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -671,7 +676,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -694,7 +699,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -717,7 +722,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -740,7 +745,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -763,7 +768,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -786,7 +791,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -809,7 +814,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -832,11 +837,16 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "total_exp_required": 20,
+      "groups": [
         {
           "num_to_select": 1,
           "trades": [
@@ -880,7 +890,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -911,11 +921,16 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "total_exp_required": 30,
+      "groups": [
         {
           "num_to_select": 1,
           "trades": [
@@ -964,7 +979,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -996,11 +1011,16 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "total_exp_required": 40,
+      "groups": [
         {
           "num_to_select": 1,
           "trades": [
@@ -1019,7 +1039,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]

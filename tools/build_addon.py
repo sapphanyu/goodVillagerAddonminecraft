@@ -1,14 +1,14 @@
 """
-GoodVillager Trade Table Generator & Pack Builder
-Downloads vanilla Bedrock trade tables and transforms them according to GoodVillager architecture:
-- Single Tier 1 consolidation
-- 100% catalog availability (each trade in its own group)
-- max_uses: 999999
-- price_multiplier: 0.0
-- trader_exp: 0, reward_exp: true
+GoodVillager Trade Table Generator & Pack Builder - Version 0.2
+- Reorganizes trades into logical 5-tier progression
+- Implements "One-Trade Leveling":
+    total_exp_required: [0, 10, 20, 30, 40]
+    trader_exp: 10 on all trades (1 trade = instant level up to next tier)
+- Categorizes Librarian enchantments into 5 clean equipment categories
+- Guaranteed 100% catalog availability per tier (num_to_select: 1 per group)
+- max_uses: 999999, price_multiplier: 0.0, reward_exp: true
 - 40-50% resource rebalance
-- Complete Librarian max-level enchanted book catalog
-- Universal explorer maps for Cartographer (Monument, Mansion, Trial Chambers)
+- Wandering Trader retains single-tier full catalog
 """
 
 import os
@@ -38,51 +38,91 @@ FILES = [
     "weapon_smith_trades.json"
 ]
 
-ALL_ENCHANTMENTS = [
-    # Armor
-    ("protection", 4, 10),
-    ("fire_protection", 4, 8),
-    ("feather_falling", 4, 10),
-    ("blast_protection", 4, 8),
-    ("projectile_protection", 4, 8),
-    ("respiration", 3, 8),
-    ("aqua_affinity", 1, 7),
-    ("thorns", 3, 10),
-    ("depth_strider", 3, 8),
-    ("frost_walker", 2, 8),
-    ("binding", 1, 5),
-    # Weapons / Swords
-    ("sharpness", 5, 10),
-    ("smite", 5, 8),
-    ("bane_of_arthropods", 5, 6),
-    ("knockback", 2, 6),
-    ("fire_aspect", 2, 8),
-    ("looting", 3, 10),
-    # Tools
-    ("efficiency", 5, 10),
-    ("silk_touch", 1, 8),
-    ("unbreaking", 3, 10),
-    ("fortune", 3, 10),
-    # Bows & Crossbows
-    ("power", 5, 10),
-    ("punch", 2, 6),
-    ("flame", 1, 8),
-    ("infinity", 1, 10),
-    ("multishot", 1, 7),
-    ("quick_charge", 3, 8),
-    ("piercing", 4, 8),
-    # Fishing
-    ("luck_of_the_sea", 3, 8),
-    ("lure", 3, 8),
-    # Trident
-    ("loyalty", 3, 8),
-    ("impaling", 5, 8),
-    ("riptide", 3, 8),
-    ("channeling", 1, 8),
-    # Universal / Special
-    ("mending", 1, 10),
-    ("vanishing", 1, 5)
-]
+TIER_EXP_THRESHOLDS = [0, 10, 20, 30, 40]
+
+# Librarian Categorization for 5 Tiers
+LIBRARIAN_TIERS = {
+    0: {  # Tier 1 (Novice): Tools & General Utility
+        "items_sell": [
+            ("minecraft:paper", 12),
+            ("minecraft:book", 2),
+            ("minecraft:ink_sac", 3)
+        ],
+        "items_buy": [
+            ("minecraft:bookshelf", 4, 1),
+            ("minecraft:lantern", 1, 1),
+            ("minecraft:glass", 1, 4)
+        ],
+        "enchants": [
+            ("efficiency", 5, 10),
+            ("silk_touch", 1, 8),
+            ("unbreaking", 3, 10),
+            ("fortune", 3, 10)
+        ]
+    },
+    1: {  # Tier 2 (Apprentice): Armor Defense
+        "items_sell": [],
+        "items_buy": [
+            ("minecraft:compass", 2, 1)
+        ],
+        "enchants": [
+            ("protection", 4, 10),
+            ("fire_protection", 4, 8),
+            ("feather_falling", 4, 10),
+            ("blast_protection", 4, 8),
+            ("projectile_protection", 4, 8),
+            ("respiration", 3, 8),
+            ("aqua_affinity", 1, 7)
+        ]
+    },
+    2: {  # Tier 3 (Journeyman): Melee Weapons & Swords
+        "items_sell": [],
+        "items_buy": [
+            ("minecraft:clock", 3, 1)
+        ],
+        "enchants": [
+            ("sharpness", 5, 10),
+            ("smite", 5, 8),
+            ("bane_of_arthropods", 5, 6),
+            ("knockback", 2, 6),
+            ("fire_aspect", 2, 8),
+            ("looting", 3, 10)
+        ]
+    },
+    3: {  # Tier 4 (Expert): Ranged Weapons & Trident
+        "items_sell": [],
+        "items_buy": [],
+        "enchants": [
+            ("power", 5, 10),
+            ("punch", 2, 6),
+            ("flame", 1, 8),
+            ("infinity", 1, 10),
+            ("multishot", 1, 7),
+            ("quick_charge", 3, 8),
+            ("piercing", 4, 8),
+            ("luck_of_the_sea", 3, 8),
+            ("lure", 3, 8),
+            ("loyalty", 3, 8),
+            ("impaling", 5, 8),
+            ("riptide", 3, 8),
+            ("channeling", 1, 8)
+        ]
+    },
+    4: {  # Tier 5 (Master): Endgame, Mobility & Curses
+        "items_sell": [],
+        "items_buy": [
+            ("minecraft:name_tag", 10, 1)
+        ],
+        "enchants": [
+            ("mending", 1, 10),
+            ("depth_strider", 3, 8),
+            ("frost_walker", 2, 8),
+            ("thorns", 3, 10),
+            ("binding", 1, 5),
+            ("vanishing", 1, 5)
+        ]
+    }
+}
 
 def strip_json_comments(text):
     text = re.sub(r'//.*', '', text)
@@ -123,7 +163,6 @@ def process_trade(trade):
     gives = []
     for give in trade.get("gives", []):
         if "choice" in give:
-            # Flatten choices into gives if possible, removing biome filters
             for choice in give["choice"]:
                 c = dict(choice)
                 if "filters" in c:
@@ -137,170 +176,185 @@ def process_trade(trade):
     new_trade["gives"] = gives
 
     new_trade["max_uses"] = 999999
-    new_trade["trader_exp"] = 0
+    new_trade["trader_exp"] = 10  # One-Trade Leveling: 10 XP advances to next tier
     new_trade["reward_exp"] = True
 
     return new_trade
 
 def generate_librarian_trades():
-    trades = []
+    tiers = []
 
-    # Regular non-book trades
-    # Selling to villager:
-    trades.append({
-        "wants": [{"item": "minecraft:paper", "quantity": 12, "price_multiplier": 0.0}],
-        "gives": [{"item": "minecraft:emerald", "quantity": 1}],
-        "max_uses": 999999, "trader_exp": 0, "reward_exp": True
-    })
-    trades.append({
-        "wants": [{"item": "minecraft:book", "quantity": 2, "price_multiplier": 0.0}],
-        "gives": [{"item": "minecraft:emerald", "quantity": 1}],
-        "max_uses": 999999, "trader_exp": 0, "reward_exp": True
-    })
-    trades.append({
-        "wants": [{"item": "minecraft:ink_sac", "quantity": 3, "price_multiplier": 0.0}],
-        "gives": [{"item": "minecraft:emerald", "quantity": 1}],
-        "max_uses": 999999, "trader_exp": 0, "reward_exp": True
-    })
+    for tier_idx in range(5):
+        cfg = LIBRARIAN_TIERS[tier_idx]
+        trades = []
 
-    # Buying utility goods:
-    trades.append({
-        "wants": [{"item": "minecraft:emerald", "quantity": 4, "price_multiplier": 0.0}],
-        "gives": [{"item": "minecraft:bookshelf", "quantity": 1}],
-        "max_uses": 999999, "trader_exp": 0, "reward_exp": True
-    })
-    trades.append({
-        "wants": [{"item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0.0}],
-        "gives": [{"item": "minecraft:lantern", "quantity": 1}],
-        "max_uses": 999999, "trader_exp": 0, "reward_exp": True
-    })
-    trades.append({
-        "wants": [{"item": "minecraft:emerald", "quantity": 1, "price_multiplier": 0.0}],
-        "gives": [{"item": "minecraft:glass", "quantity": 4}],
-        "max_uses": 999999, "trader_exp": 0, "reward_exp": True
-    })
-    trades.append({
-        "wants": [{"item": "minecraft:emerald", "quantity": 2, "price_multiplier": 0.0}],
-        "gives": [{"item": "minecraft:compass", "quantity": 1}],
-        "max_uses": 999999, "trader_exp": 0, "reward_exp": True
-    })
-    trades.append({
-        "wants": [{"item": "minecraft:emerald", "quantity": 3, "price_multiplier": 0.0}],
-        "gives": [{"item": "minecraft:clock", "quantity": 1}],
-        "max_uses": 999999, "trader_exp": 0, "reward_exp": True
-    })
-    trades.append({
-        "wants": [{"item": "minecraft:emerald", "quantity": 10, "price_multiplier": 0.0}],
-        "gives": [{"item": "minecraft:name_tag", "quantity": 1}],
-        "max_uses": 999999, "trader_exp": 0, "reward_exp": True
-    })
+        # Items sold to villager
+        for item, qty in cfg["items_sell"]:
+            trades.append({
+                "wants": [{"item": item, "quantity": qty, "price_multiplier": 0.0}],
+                "gives": [{"item": "minecraft:emerald", "quantity": 1}],
+                "max_uses": 999999, "trader_exp": 10, "reward_exp": True
+            })
 
-    # All max-level enchanted books
-    for enc_id, lvl, cost in ALL_ENCHANTMENTS:
-        trades.append({
-            "wants": [
-                {"item": "minecraft:emerald", "quantity": cost, "price_multiplier": 0.0},
-                {"item": "minecraft:book", "quantity": 1, "price_multiplier": 0.0}
-            ],
-            "gives": [
-                {
-                    "item": "minecraft:enchanted_book",
-                    "quantity": 1,
-                    "functions": [
-                        {
-                            "function": "specific_enchants",
-                            "enchants": [
-                                {
-                                    "id": enc_id,
-                                    "level": [lvl, lvl]
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ],
-            "max_uses": 999999,
-            "trader_exp": 0,
-            "reward_exp": True
+        # Items bought from villager
+        for item, cost, give_qty in cfg["items_buy"]:
+            trades.append({
+                "wants": [{"item": "minecraft:emerald", "quantity": cost, "price_multiplier": 0.0}],
+                "gives": [{"item": item, "quantity": give_qty}],
+                "max_uses": 999999, "trader_exp": 10, "reward_exp": True
+            })
+
+        # Enchanted books for this category
+        for enc_id, lvl, cost in cfg["enchants"]:
+            trades.append({
+                "wants": [
+                    {"item": "minecraft:emerald", "quantity": cost, "price_multiplier": 0.0},
+                    {"item": "minecraft:book", "quantity": 1, "price_multiplier": 0.0}
+                ],
+                "gives": [
+                    {
+                        "item": "minecraft:enchanted_book",
+                        "quantity": 1,
+                        "functions": [
+                            {
+                                "function": "specific_enchants",
+                                "enchants": [
+                                    {
+                                        "id": enc_id,
+                                        "level": [lvl, lvl]
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "max_uses": 999999,
+                "trader_exp": 10,
+                "reward_exp": True
+            })
+
+        groups = [{"num_to_select": 1, "trades": [t]} for t in trades]
+        tiers.append({
+            "total_exp_required": TIER_EXP_THRESHOLDS[tier_idx],
+            "groups": groups
         })
 
-    groups = [{"num_to_select": 1, "trades": [t]} for t in trades]
-    return {"tiers": [{"total_exp_required": 0, "groups": groups}]}
+    return {"tiers": tiers}
 
 def generate_cartographer_trades(vanilla_data):
-    trades = []
-
-    # Essential explorer maps
-    explorer_maps = [
-        ("monument", 7),
-        ("mansion", 8),
-        ("trial_chambers", 7),
-        ("jungle_temple", 6),
-        ("swamp_hut", 6),
-        ("village_plains", 5),
-        ("village_desert", 5),
-        ("village_savanna", 5),
-        ("village_snowy", 5),
-        ("village_taiga", 5)
+    tiers = []
+    
+    # Tier 1 (Novice): Paper, Empty Map
+    t1_trades = [
+        {
+            "wants": [{"item": "minecraft:paper", "quantity": 12, "price_multiplier": 0.0}],
+            "gives": [{"item": "minecraft:emerald", "quantity": 1}],
+            "max_uses": 999999, "trader_exp": 10, "reward_exp": True
+        },
+        {
+            "wants": [{"item": "minecraft:emerald", "quantity": 4, "price_multiplier": 0.0}],
+            "gives": [{"item": "minecraft:empty_map", "quantity": 1}],
+            "max_uses": 999999, "trader_exp": 10, "reward_exp": True
+        }
     ]
+    tiers.append({"total_exp_required": 0, "groups": [{"num_to_select": 1, "trades": [t]} for t in t1_trades]})
 
-    for dest, cost in explorer_maps:
-        trades.append({
+    # Tier 2 (Apprentice): Glass Pane, Ocean Monument Explorer Map
+    t2_trades = [
+        {
+            "wants": [{"item": "minecraft:glass_pane", "quantity": 6, "price_multiplier": 0.0}],
+            "gives": [{"item": "minecraft:emerald", "quantity": 1}],
+            "max_uses": 999999, "trader_exp": 10, "reward_exp": True
+        },
+        {
             "wants": [
-                {"item": "minecraft:emerald", "quantity": cost, "price_multiplier": 0.0},
+                {"item": "minecraft:emerald", "quantity": 7, "price_multiplier": 0.0},
                 {"item": "minecraft:compass", "quantity": 1, "price_multiplier": 0.0}
             ],
-            "gives": [
-                {
-                    "item": "minecraft:map",
-                    "quantity": 1,
-                    "functions": [
-                        {
-                            "function": "exploration_map",
-                            "destination": dest
-                        }
-                    ]
-                }
+            "gives": [{
+                "item": "minecraft:map", "quantity": 1,
+                "functions": [{"function": "exploration_map", "destination": "monument"}]
+            }],
+            "max_uses": 999999, "trader_exp": 10, "reward_exp": True
+        }
+    ]
+    tiers.append({"total_exp_required": 10, "groups": [{"num_to_select": 1, "trades": [t]} for t in t2_trades]})
+
+    # Tier 3 (Journeyman): Compass, Woodland Mansion & Trial Chambers Explorer Maps
+    t3_trades = [
+        {
+            "wants": [{"item": "minecraft:compass", "quantity": 1, "price_multiplier": 0.0}],
+            "gives": [{"item": "minecraft:emerald", "quantity": 1}],
+            "max_uses": 999999, "trader_exp": 10, "reward_exp": True
+        },
+        {
+            "wants": [
+                {"item": "minecraft:emerald", "quantity": 8, "price_multiplier": 0.0},
+                {"item": "minecraft:compass", "quantity": 1, "price_multiplier": 0.0}
             ],
-            "max_uses": 999999,
-            "trader_exp": 0,
-            "reward_exp": True
-        })
+            "gives": [{
+                "item": "minecraft:map", "quantity": 1,
+                "functions": [{"function": "exploration_map", "destination": "mansion"}]
+            }],
+            "max_uses": 999999, "trader_exp": 10, "reward_exp": True
+        },
+        {
+            "wants": [
+                {"item": "minecraft:emerald", "quantity": 7, "price_multiplier": 0.0},
+                {"item": "minecraft:compass", "quantity": 1, "price_multiplier": 0.0}
+            ],
+            "gives": [{
+                "item": "minecraft:map", "quantity": 1,
+                "functions": [{"function": "exploration_map", "destination": "trial_chambers"}]
+            }],
+            "max_uses": 999999, "trader_exp": 10, "reward_exp": True
+        }
+    ]
+    tiers.append({"total_exp_required": 20, "groups": [{"num_to_select": 1, "trades": [t]} for t in t3_trades]})
 
-    # Standard cartographer items
-    trades.append({
-        "wants": [{"item": "minecraft:paper", "quantity": 12, "price_multiplier": 0.0}],
-        "gives": [{"item": "minecraft:emerald", "quantity": 1}],
-        "max_uses": 999999, "trader_exp": 0, "reward_exp": True
-    })
-    trades.append({
-        "wants": [{"item": "minecraft:glass_pane", "quantity": 6, "price_multiplier": 0.0}],
-        "gives": [{"item": "minecraft:emerald", "quantity": 1}],
-        "max_uses": 999999, "trader_exp": 0, "reward_exp": True
-    })
-    trades.append({
-        "wants": [{"item": "minecraft:compass", "quantity": 1, "price_multiplier": 0.0}],
-        "gives": [{"item": "minecraft:emerald", "quantity": 1}],
-        "max_uses": 999999, "trader_exp": 0, "reward_exp": True
-    })
-    trades.append({
-        "wants": [{"item": "minecraft:emerald", "quantity": 4, "price_multiplier": 0.0}],
-        "gives": [{"item": "minecraft:empty_map", "quantity": 1}],
-        "max_uses": 999999, "trader_exp": 0, "reward_exp": True
-    })
-    trades.append({
-        "wants": [{"item": "minecraft:emerald", "quantity": 3, "price_multiplier": 0.0}],
-        "gives": [{"item": "minecraft:frame", "quantity": 1}],
-        "max_uses": 999999, "trader_exp": 0, "reward_exp": True
-    })
-    trades.append({
-        "wants": [{"item": "minecraft:emerald", "quantity": 4, "price_multiplier": 0.0}],
-        "gives": [{"item": "minecraft:globe_banner_pattern", "quantity": 1}],
-        "max_uses": 999999, "trader_exp": 0, "reward_exp": True
-    })
+    # Tier 4 (Expert): Item Frame, Village/Structure Maps
+    t4_trades = [
+        {
+            "wants": [{"item": "minecraft:emerald", "quantity": 3, "price_multiplier": 0.0}],
+            "gives": [{"item": "minecraft:frame", "quantity": 1}],
+            "max_uses": 999999, "trader_exp": 10, "reward_exp": True
+        },
+        {
+            "wants": [
+                {"item": "minecraft:emerald", "quantity": 6, "price_multiplier": 0.0},
+                {"item": "minecraft:compass", "quantity": 1, "price_multiplier": 0.0}
+            ],
+            "gives": [{
+                "item": "minecraft:map", "quantity": 1,
+                "functions": [{"function": "exploration_map", "destination": "jungle_temple"}]
+            }],
+            "max_uses": 999999, "trader_exp": 10, "reward_exp": True
+        },
+        {
+            "wants": [
+                {"item": "minecraft:emerald", "quantity": 6, "price_multiplier": 0.0},
+                {"item": "minecraft:compass", "quantity": 1, "price_multiplier": 0.0}
+            ],
+            "gives": [{
+                "item": "minecraft:map", "quantity": 1,
+                "functions": [{"function": "exploration_map", "destination": "swamp_hut"}]
+            }],
+            "max_uses": 999999, "trader_exp": 10, "reward_exp": True
+        }
+    ]
+    tiers.append({"total_exp_required": 30, "groups": [{"num_to_select": 1, "trades": [t]} for t in t4_trades]})
 
-    groups = [{"num_to_select": 1, "trades": [t]} for t in trades]
-    return {"tiers": [{"total_exp_required": 0, "groups": groups}]}
+    # Tier 5 (Master): Globe Banner Pattern
+    t5_trades = [
+        {
+            "wants": [{"item": "minecraft:emerald", "quantity": 4, "price_multiplier": 0.0}],
+            "gives": [{"item": "minecraft:globe_banner_pattern", "quantity": 1}],
+            "max_uses": 999999, "trader_exp": 10, "reward_exp": True
+        }
+    ]
+    tiers.append({"total_exp_required": 40, "groups": [{"num_to_select": 1, "trades": [t]} for t in t5_trades]})
+
+    return {"tiers": tiers}
 
 def transform_file(filename):
     print(f"Processing {filename}...")
@@ -315,16 +369,44 @@ def transform_file(filename):
     if filename == "cartographer_trades.json":
         return generate_cartographer_trades(vanilla_data)
 
-    # Collect all trades across all tiers
-    all_trades = []
-    seen_sigs = set()
+    if filename == "wandering_trader_trades.json":
+        # Wandering trader has 1 tier, no leveling
+        all_trades = []
+        seen_sigs = set()
+        for tier in vanilla_data.get("tiers", []):
+            for group in tier.get("groups", []):
+                for trade in group.get("trades", []):
+                    pt = process_trade(trade)
+                    pt["trader_exp"] = 0  # No leveling for wandering trader
+                    if len(pt["gives"]) > 1:
+                        for g_item in pt["gives"]:
+                            single_trade = dict(pt)
+                            single_trade["gives"] = [g_item]
+                            sig = json.dumps([single_trade["wants"], single_trade["gives"]], sort_keys=True)
+                            if sig not in seen_sigs:
+                                seen_sigs.add(sig)
+                                all_trades.append(single_trade)
+                    else:
+                        sig = json.dumps([pt["wants"], pt["gives"]], sort_keys=True)
+                        if sig not in seen_sigs:
+                            seen_sigs.add(sig)
+                            all_trades.append(pt)
+        groups = [{"num_to_select": 1, "trades": [t]} for t in all_trades]
+        return {"tiers": [{"total_exp_required": 0, "groups": groups}]}
 
-    for tier in vanilla_data.get("tiers", []):
-        for group in tier.get("groups", []):
+    # Standard 5-tier villager professions
+    out_tiers = []
+    vanilla_tiers = vanilla_data.get("tiers", [])
+
+    for tier_idx in range(len(vanilla_tiers)):
+        v_tier = vanilla_tiers[tier_idx]
+        exp_req = TIER_EXP_THRESHOLDS[tier_idx] if tier_idx < len(TIER_EXP_THRESHOLDS) else tier_idx * 10
+        tier_trades = []
+        seen_sigs = set()
+
+        for group in v_tier.get("groups", []):
             for trade in group.get("trades", []):
                 pt = process_trade(trade)
-                
-                # Check for gives choice unfolding
                 if len(pt["gives"]) > 1:
                     for g_item in pt["gives"]:
                         single_trade = dict(pt)
@@ -332,16 +414,20 @@ def transform_file(filename):
                         sig = json.dumps([single_trade["wants"], single_trade["gives"]], sort_keys=True)
                         if sig not in seen_sigs:
                             seen_sigs.add(sig)
-                            all_trades.append(single_trade)
+                            tier_trades.append(single_trade)
                 else:
                     sig = json.dumps([pt["wants"], pt["gives"]], sort_keys=True)
                     if sig not in seen_sigs:
                         seen_sigs.add(sig)
-                        all_trades.append(pt)
+                        tier_trades.append(pt)
 
-    # Wrap each trade in its own group with num_to_select: 1
-    groups = [{"num_to_select": 1, "trades": [t]} for t in all_trades]
-    return {"tiers": [{"total_exp_required": 0, "groups": groups}]}
+        tier_groups = [{"num_to_select": 1, "trades": [t]} for t in tier_trades]
+        out_tiers.append({
+            "total_exp_required": exp_req,
+            "groups": tier_groups
+        })
+
+    return {"tiers": out_tiers}
 
 def generate_pack_icon(output_path):
     img = Image.new("RGBA", (256, 256), color=(34, 139, 34))
@@ -364,12 +450,11 @@ def generate_pack_icon(output_path):
     center_pts = [(128, 85), (155, 128), (128, 170), (101, 128)]
     draw.polygon(center_pts, fill=(185, 246, 202))
 
-    # Text banner at bottom
+    # Text banner at bottom: v0.2
     draw.rectangle([20, 190, 236, 235], fill=(0, 0, 0, 190))
-    # Simple letter shapes or fallback text
     try:
         font = ImageFont.load_default()
-        draw.text((45, 202), "GOOD VILLAGER", fill=(255, 255, 255), font=font)
+        draw.text((35, 202), "GOOD VILLAGER v0.2", fill=(255, 255, 255), font=font)
     except Exception:
         pass
 
@@ -378,16 +463,13 @@ def generate_pack_icon(output_path):
 
 def package_mcpack(workspace_dir, output_mcpack):
     with zipfile.ZipFile(output_mcpack, 'w', zipfile.ZIP_DEFLATED) as zf:
-        # manifest.json
         manifest_path = os.path.join(workspace_dir, "manifest.json")
         zf.write(manifest_path, "manifest.json")
 
-        # pack_icon.png
         icon_path = os.path.join(workspace_dir, "pack_icon.png")
         if os.path.exists(icon_path):
             zf.write(icon_path, "pack_icon.png")
 
-        # trading folder
         trading_dir = os.path.join(workspace_dir, "trading")
         for root, _, files in os.walk(trading_dir):
             for file in files:
@@ -407,14 +489,26 @@ def main():
         out_path = os.path.join(OUTPUT_DIR, filename)
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(result, f, indent=2, ensure_ascii=False)
-        print(f"Saved {out_path} ({len(result['tiers'][0]['groups'])} trade groups)")
+        tiers_summary = ", ".join(f"T{i+1}:{len(t['groups'])}" for i, t in enumerate(result['tiers']))
+        print(f"Saved {out_path} ({tiers_summary})")
 
-    # Also save mason_trades.json alias for stone_mason_trades.json for 100% compatibility
+    # Also save mason_trades.json alias for stone_mason_trades.json
     stone_mason_path = os.path.join(OUTPUT_DIR, "stone_mason_trades.json")
     mason_path = os.path.join(OUTPUT_DIR, "mason_trades.json")
     with open(stone_mason_path, "r", encoding="utf-8") as src, open(mason_path, "w", encoding="utf-8") as dst:
         dst.write(src.read())
     print("Saved mason_trades.json (alias for stone_mason_trades.json)")
+
+    # Update manifest.json version to 0.2.0
+    manifest_path = os.path.join(workspace_dir, "manifest.json")
+    with open(manifest_path, "r", encoding="utf-8") as f:
+        manifest = json.load(f)
+    manifest["header"]["version"] = [0, 2, 0]
+    manifest["header"]["description"] = "GoodVillager v0.2: Categorized 5-tier progression with One-Trade Leveling, 100% catalog availability, and flat 40-50% discounts."
+    manifest["modules"][0]["version"] = [0, 2, 0]
+    with open(manifest_path, "w", encoding="utf-8") as f:
+        json.dump(manifest, f, indent=2, ensure_ascii=False)
+    print("Updated manifest.json to version 0.2.0")
 
     # Generate pack_icon.png
     icon_path = os.path.join(workspace_dir, "pack_icon.png")
@@ -424,7 +518,7 @@ def main():
     mcpack_path = os.path.join(workspace_dir, "GoodVillager.mcpack")
     package_mcpack(workspace_dir, mcpack_path)
 
-    print("\nAll files built and packaged successfully!")
+    print("\nAll files for Version 0.2 built and packaged successfully!")
 
 if __name__ == "__main__":
     main()

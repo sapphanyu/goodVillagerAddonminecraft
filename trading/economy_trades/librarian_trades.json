@@ -21,7 +21,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -44,7 +44,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -67,7 +67,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -90,7 +90,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -113,7 +113,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -136,790 +136,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 2,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:compass",
-                  "quantity": 1
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 3,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:clock",
-                  "quantity": 1
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 10,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:name_tag",
-                  "quantity": 1
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 10,
-                  "price_multiplier": 0.0
-                },
-                {
-                  "item": "minecraft:book",
-                  "quantity": 1,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:enchanted_book",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants": [
-                        {
-                          "id": "protection",
-                          "level": [
-                            4,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 8,
-                  "price_multiplier": 0.0
-                },
-                {
-                  "item": "minecraft:book",
-                  "quantity": 1,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:enchanted_book",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants": [
-                        {
-                          "id": "fire_protection",
-                          "level": [
-                            4,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 10,
-                  "price_multiplier": 0.0
-                },
-                {
-                  "item": "minecraft:book",
-                  "quantity": 1,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:enchanted_book",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants": [
-                        {
-                          "id": "feather_falling",
-                          "level": [
-                            4,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 8,
-                  "price_multiplier": 0.0
-                },
-                {
-                  "item": "minecraft:book",
-                  "quantity": 1,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:enchanted_book",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants": [
-                        {
-                          "id": "blast_protection",
-                          "level": [
-                            4,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 8,
-                  "price_multiplier": 0.0
-                },
-                {
-                  "item": "minecraft:book",
-                  "quantity": 1,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:enchanted_book",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants": [
-                        {
-                          "id": "projectile_protection",
-                          "level": [
-                            4,
-                            4
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 8,
-                  "price_multiplier": 0.0
-                },
-                {
-                  "item": "minecraft:book",
-                  "quantity": 1,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:enchanted_book",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants": [
-                        {
-                          "id": "respiration",
-                          "level": [
-                            3,
-                            3
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 7,
-                  "price_multiplier": 0.0
-                },
-                {
-                  "item": "minecraft:book",
-                  "quantity": 1,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:enchanted_book",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants": [
-                        {
-                          "id": "aqua_affinity",
-                          "level": [
-                            1,
-                            1
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 10,
-                  "price_multiplier": 0.0
-                },
-                {
-                  "item": "minecraft:book",
-                  "quantity": 1,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:enchanted_book",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants": [
-                        {
-                          "id": "thorns",
-                          "level": [
-                            3,
-                            3
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 8,
-                  "price_multiplier": 0.0
-                },
-                {
-                  "item": "minecraft:book",
-                  "quantity": 1,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:enchanted_book",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants": [
-                        {
-                          "id": "depth_strider",
-                          "level": [
-                            3,
-                            3
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 8,
-                  "price_multiplier": 0.0
-                },
-                {
-                  "item": "minecraft:book",
-                  "quantity": 1,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:enchanted_book",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants": [
-                        {
-                          "id": "frost_walker",
-                          "level": [
-                            2,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 5,
-                  "price_multiplier": 0.0
-                },
-                {
-                  "item": "minecraft:book",
-                  "quantity": 1,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:enchanted_book",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants": [
-                        {
-                          "id": "binding",
-                          "level": [
-                            1,
-                            1
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 10,
-                  "price_multiplier": 0.0
-                },
-                {
-                  "item": "minecraft:book",
-                  "quantity": 1,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:enchanted_book",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants": [
-                        {
-                          "id": "sharpness",
-                          "level": [
-                            5,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 8,
-                  "price_multiplier": 0.0
-                },
-                {
-                  "item": "minecraft:book",
-                  "quantity": 1,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:enchanted_book",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants": [
-                        {
-                          "id": "smite",
-                          "level": [
-                            5,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 6,
-                  "price_multiplier": 0.0
-                },
-                {
-                  "item": "minecraft:book",
-                  "quantity": 1,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:enchanted_book",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants": [
-                        {
-                          "id": "bane_of_arthropods",
-                          "level": [
-                            5,
-                            5
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 6,
-                  "price_multiplier": 0.0
-                },
-                {
-                  "item": "minecraft:book",
-                  "quantity": 1,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:enchanted_book",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants": [
-                        {
-                          "id": "knockback",
-                          "level": [
-                            2,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 8,
-                  "price_multiplier": 0.0
-                },
-                {
-                  "item": "minecraft:book",
-                  "quantity": 1,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:enchanted_book",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants": [
-                        {
-                          "id": "fire_aspect",
-                          "level": [
-                            2,
-                            2
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
-              "reward_exp": true
-            }
-          ]
-        },
-        {
-          "num_to_select": 1,
-          "trades": [
-            {
-              "wants": [
-                {
-                  "item": "minecraft:emerald",
-                  "quantity": 10,
-                  "price_multiplier": 0.0
-                },
-                {
-                  "item": "minecraft:book",
-                  "quantity": 1,
-                  "price_multiplier": 0.0
-                }
-              ],
-              "gives": [
-                {
-                  "item": "minecraft:enchanted_book",
-                  "quantity": 1,
-                  "functions": [
-                    {
-                      "function": "specific_enchants",
-                      "enchants": [
-                        {
-                          "id": "looting",
-                          "level": [
-                            3,
-                            3
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ],
-              "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -961,7 +178,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -1003,7 +220,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -1045,7 +262,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -1087,11 +304,618 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "total_exp_required": 10,
+      "groups": [
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 2,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:compass",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
         },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 10,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "protection",
+                          "level": [
+                            4,
+                            4
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 8,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "fire_protection",
+                          "level": [
+                            4,
+                            4
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 10,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "feather_falling",
+                          "level": [
+                            4,
+                            4
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 8,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "blast_protection",
+                          "level": [
+                            4,
+                            4
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 8,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "projectile_protection",
+                          "level": [
+                            4,
+                            4
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 8,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "respiration",
+                          "level": [
+                            3,
+                            3
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 7,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "aqua_affinity",
+                          "level": [
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "total_exp_required": 20,
+      "groups": [
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 3,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:clock",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 10,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "sharpness",
+                          "level": [
+                            5,
+                            5
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 8,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "smite",
+                          "level": [
+                            5,
+                            5
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 6,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "bane_of_arthropods",
+                          "level": [
+                            5,
+                            5
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 6,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "knockback",
+                          "level": [
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 8,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "fire_aspect",
+                          "level": [
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 10,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "looting",
+                          "level": [
+                            3,
+                            3
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "total_exp_required": 30,
+      "groups": [
         {
           "num_to_select": 1,
           "trades": [
@@ -1129,7 +953,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -1171,7 +995,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -1213,7 +1037,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -1255,7 +1079,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -1297,7 +1121,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -1339,7 +1163,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -1381,7 +1205,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -1423,7 +1247,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -1465,7 +1289,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -1507,7 +1331,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -1549,7 +1373,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -1591,7 +1415,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -1633,7 +1457,35 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "total_exp_required": 40,
+      "groups": [
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 10,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:name_tag",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -1675,7 +1527,175 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 8,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "depth_strider",
+                          "level": [
+                            3,
+                            3
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 8,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "frost_walker",
+                          "level": [
+                            2,
+                            2
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 10,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "thorns",
+                          "level": [
+                            3,
+                            3
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 5,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:enchanted_book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "specific_enchants",
+                      "enchants": [
+                        {
+                          "id": "binding",
+                          "level": [
+                            1,
+                            1
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]
@@ -1717,7 +1737,7 @@
                 }
               ],
               "max_uses": 999999,
-              "trader_exp": 0,
+              "trader_exp": 10,
               "reward_exp": true
             }
           ]

@@ -1,0 +1,3 @@
+# One-Trade Tier Categorization (Version 0.2)
+
+We decided to reorganize villager trade tables from a flat single-tier (Tier 1 Consolidation) into a structured 5-tier progression categorized by equipment and progression role (e.g. Librarian: Tools -> Armor -> Melee -> Ranged/Trident -> Endgame/Curses), paired with a "One-Trade Leveling" mechanic. Setting incremental XP thresholds (0, 10, 20, 30, 40) with each trade awarding 10 trader XP ensures that executing just one trade advances the villager to the next tier immediately. This gives players clean, categorized trade windows without clutter while preserving frictionless, instant access without the vanilla XP grind.
