@@ -9,8 +9,12 @@ A Minecraft Bedrock Edition behavior pack add-on that modernizes villager and wa
 _Avoid_: Mod, resource pack, server plugin
 
 **Tier 1 Consolidation**:
-The architectural pattern of flattening all villager trades across progression tiers into the initial Novice tier (Tier 1).
+The architectural pattern of flattening all villager trades across progression tiers into the initial Novice tier (Tier 1). Used in Version 0.1.
 _Avoid_: Multi-tier trades, level progression, trade unlocking
+
+**One-Trade Leveling**:
+The progression mechanic introduced in Version 0.2 where each trade awards sufficient Trader XP (10 XP) against linear tier thresholds (0, 10, 20, 30, 40) to advance the villager to the subsequent tier in a single transaction.
+_Avoid_: Fast grinding, instant exp cheat, level skip
 
 **Economy Trade Table**:
 A Minecraft Bedrock behavior pack JSON file (`trading/economy_trades/*.json`) defining villager transaction offers and costs.
