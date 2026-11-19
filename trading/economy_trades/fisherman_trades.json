@@ -1,0 +1,380 @@
+{
+  "tiers": [
+    {
+      "total_exp_required": 0,
+      "groups": [
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:string",
+                  "quantity": 11,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:coal:0",
+                  "quantity": 6,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 2,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:bucket:2",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:fish",
+                  "quantity": 3,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:cooked_fish",
+                  "quantity": 6
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:fish",
+                  "quantity": 8,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:campfire",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1,
+                  "price_multiplier": 0.0
+                },
+                {
+                  "item": "minecraft:salmon",
+                  "quantity": 3,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:cooked_salmon",
+                  "quantity": 6
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:salmon",
+                  "quantity": 7,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 2,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:fishing_rod",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "enchant_with_levels",
+                      "treasure": false,
+                      "levels": {
+                        "min": 5,
+                        "max": 19
+                      }
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:clownfish",
+                  "quantity": 3,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:pufferfish",
+                  "quantity": 2,
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "choice": [
+                    {
+                      "item": "minecraft:oak_boat",
+                      "quantity": 1,
+                      "price_multiplier": 0.05,
+                      "filters": {
+                        "test": "is_mark_variant",
+                        "subject": "self",
+                        "value": 0,
+                        "operator": "="
+                      }
+                    },
+                    {
+                      "item": "minecraft:spruce_boat",
+                      "quantity": 1,
+                      "price_multiplier": 0.05,
+                      "filters": {
+                        "any_of": [
+                          {
+                            "test": "is_mark_variant",
+                            "subject": "self",
+                            "value": 4,
+                            "operator": "="
+                          },
+                          {
+                            "test": "is_mark_variant",
+                            "subject": "self",
+                            "value": 6,
+                            "operator": "="
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "item": "minecraft:jungle_boat",
+                      "quantity": 1,
+                      "price_multiplier": 0.05,
+                      "filters": {
+                        "any_of": [
+                          {
+                            "test": "is_mark_variant",
+                            "subject": "self",
+                            "value": 1,
+                            "operator": "="
+                          },
+                          {
+                            "test": "is_mark_variant",
+                            "subject": "self",
+                            "value": 2,
+                            "operator": "="
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "item": "minecraft:acacia_boat",
+                      "quantity": 1,
+                      "price_multiplier": 0.05,
+                      "filters": {
+                        "test": "is_mark_variant",
+                        "subject": "self",
+                        "value": 3,
+                        "operator": "="
+                      }
+                    },
+                    {
+                      "item": "minecraft:dark_oak_boat",
+                      "quantity": 1,
+                      "price_multiplier": 0.05,
+                      "filters": {
+                        "test": "is_mark_variant",
+                        "subject": "self",
+                        "value": 5,
+                        "operator": "="
+                      }
+                    }
+                  ],
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

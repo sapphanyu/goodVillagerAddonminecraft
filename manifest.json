@@ -1,0 +1,18 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "GoodVillager Behavior Pack",
+    "description": "Overhauled villager trading: Instant Tier 1 unlock, 100% trade catalog, unlimited trades, and 40-50% discounts.",
+    "uuid": "d283fb8b-cc43-41de-8021-d2598c4c1fc0",
+    "version": [1, 0, 0],
+    "min_engine_version": [1, 21, 0]
+  },
+  "modules": [
+    {
+      "description": "GoodVillager Behavior Pack Module",
+      "type": "data",
+      "uuid": "c2d36cc7-89ec-400f-a3a8-a66f675b1955",
+      "version": [1, 0, 0]
+    }
+  ]
+}

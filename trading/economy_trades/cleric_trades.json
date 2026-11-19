@@ -1,0 +1,357 @@
+{
+  "tiers": [
+    {
+      "total_exp_required": 0,
+      "groups": [
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "choice": [
+                    {
+                      "quantity": {
+                        "min": 32,
+                        "max": 32
+                      },
+                      "item": "minecraft:rotten_flesh",
+                      "functions": [],
+                      "price_multiplier": 0.05
+                    }
+                  ],
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "functions": []
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "choice": [
+                    {
+                      "item": "minecraft:emerald",
+                      "functions": [],
+                      "price_multiplier": 0.05
+                    }
+                  ],
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "quantity": {
+                    "min": 2,
+                    "max": 2
+                  },
+                  "item": "minecraft:redstone",
+                  "functions": []
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "choice": [
+                    {
+                      "quantity": {
+                        "min": 3,
+                        "max": 3
+                      },
+                      "item": "minecraft:gold_ingot",
+                      "functions": [],
+                      "price_multiplier": 0.05
+                    }
+                  ],
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "functions": []
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "choice": [
+                    {
+                      "item": "minecraft:emerald",
+                      "functions": [],
+                      "price_multiplier": 0.05
+                    }
+                  ],
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:dye:4",
+                  "functions": []
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "choice": [
+                    {
+                      "quantity": {
+                        "min": 2,
+                        "max": 2
+                      },
+                      "item": "minecraft:rabbit_foot",
+                      "functions": [],
+                      "price_multiplier": 0.05
+                    }
+                  ],
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "functions": []
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "choice": [
+                    {
+                      "quantity": {
+                        "min": 4,
+                        "max": 4
+                      },
+                      "item": "minecraft:emerald",
+                      "functions": [],
+                      "price_multiplier": 0.05
+                    }
+                  ],
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:glowstone",
+                  "functions": []
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "choice": [
+                    {
+                      "quantity": {
+                        "min": 4,
+                        "max": 4
+                      },
+                      "item": "minecraft:turtle_shell_piece",
+                      "functions": [],
+                      "price_multiplier": 0.05
+                    }
+                  ],
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "functions": []
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "choice": [
+                    {
+                      "quantity": {
+                        "min": 9,
+                        "max": 9
+                      },
+                      "item": "minecraft:glass_bottle",
+                      "functions": [],
+                      "price_multiplier": 0.05
+                    }
+                  ],
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "functions": []
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "choice": [
+                    {
+                      "quantity": {
+                        "min": 5,
+                        "max": 5
+                      },
+                      "item": "minecraft:emerald",
+                      "functions": [],
+                      "price_multiplier": 0.05
+                    }
+                  ],
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:ender_pearl",
+                  "functions": []
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "choice": [
+                    {
+                      "quantity": {
+                        "min": 22,
+                        "max": 22
+                      },
+                      "item": "minecraft:nether_wart",
+                      "functions": [],
+                      "price_multiplier": 0.05
+                    }
+                  ],
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:emerald",
+                  "functions": []
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "choice": [
+                    {
+                      "quantity": {
+                        "min": 3,
+                        "max": 3
+                      },
+                      "item": "minecraft:emerald",
+                      "functions": [],
+                      "price_multiplier": 0.05
+                    }
+                  ],
+                  "price_multiplier": 0.0
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:experience_bottle",
+                  "functions": []
+                }
+              ],
+              "max_uses": 999999,
+              "trader_exp": 0,
+              "reward_exp": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

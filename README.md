@@ -53,9 +53,15 @@
 GoodVillager/
 ├── README.md               # รายละเอียดและคู่มือการใช้งาน Add-on
 ├── DESIGN_ALIGNMENT.md     # เอกสารสรุปการตัดสินใจและสถาปัตยกรรมระบบ
+├── GLOSSARY.md             # นิยามคำศัพท์และขอบเขตโดเมนของโปรเจกต์
+├── docs/adr/               # Architecture Decision Records (ADRs)
 ├── manifest.json           # การกำหนดค่า Behavior Pack และ Engine Version
 ├── pack_icon.png           # รูปไอคอนของ Add-on
+├── GoodVillager.mcpack     # ไฟล์ติดตั้งสำเร็จรูป One-Click Installer
+├── tools/
+│   └── build_addon.py      # สคริปต์อัตโนมัติสร้างและคอมไพล์ตารางเทรดพร้อมแพ็กเกจ
 └── trading/                # ตารางข้อมูลการแลกเปลี่ยน (Economy Trades) ของทุกอาชีพ
+    └── economy_trades/
 ```
 
 ---
